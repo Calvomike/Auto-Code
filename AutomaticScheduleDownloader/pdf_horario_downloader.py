@@ -136,5 +136,11 @@ def imp_horario(url,f,g,c):
     finally:
         driver.quit()
 
+web="https://web02.uab.es:31501/pds/consultaPublica/look%5Bconpub%5DInicioPubHora?entradaPublica=true&idiomaPais=ca.ES"
+
 for i in range(1,5):
-    imp_horario("https://web02.uab.es:31501/pds/consultaPublica/look%5Bconpub%5DInicioPubHora?entradaPublica=true&idiomaPais=ca.ES",103,1281,i)
+    imp_horario(web,103,1281,i) #Fisica
+    imp_horario(web,103,1286,i) #Fisica + Mates
+    imp_horario(web,103,1434,i) #Fisica + Quimica
+
+print('Programa finalizado')
