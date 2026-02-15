@@ -140,7 +140,7 @@ web="https://web02.uab.es:31501/pds/consultaPublica/look%5Bconpub%5DInicioPubHor
 
 for i in range(1,5):
     imp_horario(web,103,1281,i) #Fisica
-    imp_horario(web,103,1286,i) #Fisica + Mates
-    imp_horario(web,103,1434,i) #Fisica + Quimica
+    #imp_horario(web,103,1286,i) #Fisica + Mates
+    #imp_horario(web,103,1434,i) #Fisica + Quimica
 
 print('Programa finalizado')
