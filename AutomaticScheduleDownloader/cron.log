@@ -1,0 +1,189 @@
+-----------------------------
+Inicio: Sun Feb 15 04:50:52 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 14: /myenv/bin/python3: No such file or directory
+Error ejecutando script
+Fin: Sun Feb 15 04:50:52 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 04:53:18 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 14: /myenv/bin/python3/pdf_horario_downloader.py: No such file or directory
+Error ejecutando script
+Fin: Sun Feb 15 04:53:18 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 04:54:24 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 14: /myenv/bin/python3: No such file or directory
+Error ejecutando script
+Fin: Sun Feb 15 04:54:24 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 04:58:46 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 17: python: command not found
+Error ejecutando script
+Fin: Sun Feb 15 04:58:46 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 04:59:19 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/pdf_horario_downloader.py", line 7, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+Error ejecutando script
+Fin: Sun Feb 15 04:59:20 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 05:01:28 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/pdf_horario_downloader.py", line 7, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+Error ejecutando script
+Fin: Sun Feb 15 05:01:30 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 05:02:00 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/pdf_horario_downloader.py", line 7, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+Error ejecutando script
+Fin: Sun Feb 15 05:02:01 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 05:04:51 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/pdf_horario_downloader.py", line 7, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+Error ejecutando script
+Fin: Sun Feb 15 05:04:52 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 05:06:11 PM CET 2026
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/run.sh: line 15: myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/pdf_horario_downloader.py", line 7, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+Error ejecutando script
+Fin: Sun Feb 15 05:06:12 PM CET 2026
+-----------------------------
+Inicio: Sun Feb 15 05:10:42 PM CET 2026
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1281_curso1.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1286_curso1.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1434_curso1.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1281_curso2.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1286_curso2.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1434_curso2.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1281_curso3.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1286_curso3.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1434_curso3.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1281_curso4.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1286_curso4.pdf
+Seleccionando centro...
+Centro seleccionado correctamente
+Seleccionando grado...
+Grado seleccionado correctamente
+Seleccionando curso...
+Curso seleccionado correctamente
+Pulsando boton -Veure Calendari-...
+Boton -Veure Calendari- pulsado correctamente
+PDF guardado correctamente en:
+/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader/horarios_pdf/horario_personalizado_facultad103_grado1434_curso4.pdf
+Programa finalizado

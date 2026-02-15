@@ -11,7 +11,10 @@ LOG_FILE="$PROJECT_DIR/cron.log"
 echo "-----------------------------"
 echo "Inicio: $(date)"
 
-/myenv/bin/python3 script.py
+# activar entorno virtual
+source /home/calvomike/myenv/bin/activate
+
+python3 pdf_horario_downloader.py
 
 if [ $? -eq 0 ]; then
     git add .
