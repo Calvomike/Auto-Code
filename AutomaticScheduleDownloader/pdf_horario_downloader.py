@@ -8,6 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import os
 import base64
 import pathlib as Path
+import datetime
 
 '''
 url = "https://web02.uab.es:31501/pds/consultaPublica/look%5Bconpub%5DInicioPubHora?entradaPublica=true&idiomaPais=ca.ES" #Consulta publica horarios uab
@@ -81,6 +82,29 @@ def imp_horario(url,f,g,c):
         boton_cal = wait.until(EC.element_to_be_clickable((By.ID, "buscarCalendario")))
         boton_cal.click()
         print('Boton -Veure Calendari- pulsado correctamente')
+
+
+        #Miramos que dia es hoy
+        hoy = datetime.datetime.now()
+        dia_semana = hoy.weekday()  # 0 = lunes, 6 = domingo
+
+        if dia_semana >= 5:
+            print("Es fin de semana (pulsamos boton -Seguent-)")
+
+            # Esperamos a aque cargue la pagina
+            wait.until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+
+            #Pulsar boton 'Seguent'
+            print("Pulsando boton -Seguent-...")
+            boton_seg = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[title="SegÃ¼ent"]')))
+            driver.execute_script("arguments[0].click();", boton_seg)
+
+            print('Boton -Seguent- pulsado correctamente')
+
+        else:
+            print("Es entre semana (NO pulsamos boton -Seguent-)")
 
 
         # Esperamos a aque cargue la pagina
