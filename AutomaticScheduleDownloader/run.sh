@@ -2,7 +2,7 @@
 
 export PATH=/usr/local/bin:/usr/bin:/bin
 
-PROJECT_DIR="/home/calvomike/GitHub Repositories/Auto-Code/AutomaticScheduleDownloader"
+PROJECT_DIR="/home/calvomike/github_repos/Auto-Code/AutomaticScheduleDownloader"
 cd "$PROJECT_DIR" || exit 1
 
 LOG_FILE="$PROJECT_DIR/cron.log"
