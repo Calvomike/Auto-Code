@@ -116,7 +116,7 @@ def imp_horario(url,f,g,c):
             EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, ".fc-printButton-button.fc-button.fc-button-primary")
             ))
-        time.sleep(3)
+        time.sleep(1)
 
 
         # Descargar PDF
