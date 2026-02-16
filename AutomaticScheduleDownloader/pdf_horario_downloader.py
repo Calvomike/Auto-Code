@@ -9,6 +9,7 @@ import os
 import base64
 import pathlib as Path
 import datetime
+import time
 
 '''
 url = "https://web02.uab.es:31501/pds/consultaPublica/look%5Bconpub%5DInicioPubHora?entradaPublica=true&idiomaPais=ca.ES" #Consulta publica horarios uab
@@ -115,7 +116,8 @@ def imp_horario(url,f,g,c):
             EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, ".fc-printButton-button.fc-button.fc-button-primary")
             ))
-        
+        time.sleep(3)
+
 
         # Descargar PDF
         # Obtener altura total de la página en píxeles
