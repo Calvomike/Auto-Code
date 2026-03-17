@@ -132,7 +132,7 @@ def imp_horario(url,f,g,c):
             );
         """)
         # Convertir px → pulgadas
-        dpi = 96 # Chrome usa 96 DPI por defecto
+        dpi = 80 # Chrome usa 96 DPI por defecto
         total_height_inches = total_height_px / dpi
 
         # Generar PDF usando CDP
