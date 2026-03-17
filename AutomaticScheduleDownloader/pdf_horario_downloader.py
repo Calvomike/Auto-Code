@@ -20,7 +20,7 @@ c=3 #3r Curso
 
 def imp_horario(url,f,g,c):
     # Personalizacion de archivo final
-    nombre_archivo = f"horario_personalizado_facultad{f}_grado{g}_curso{c}.pdf"
+    nombre_archivo = f"hp_facultad{f}_grado{g}_curso{c}.pdf"
 
     # Carpeta donde se descargará el PDF
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -116,7 +116,7 @@ def imp_horario(url,f,g,c):
             EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, ".fc-printButton-button.fc-button.fc-button-primary")
             ))
-        time.sleep(1)
+        time.sleep(3)
 
 
         # Descargar PDF
