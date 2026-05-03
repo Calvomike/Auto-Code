@@ -18,18 +18,36 @@ g=1281 #Fisica
 c=3 #3r Curso
 '''
 
+def esperar_carga_pagina(driver, timeout=20):
+    wait = WebDriverWait(driver, timeout)
+
+    # Esperar a que el calendario esté presente
+    wait.until(
+        EC.presence_of_element_located((By.CLASS_NAME, "fc-view"))
+    )
+
+    # Esperar a botón imprimir
+    wait.until(
+        EC.element_to_be_clickable(
+            (By.CSS_SELECTOR, ".fc-printButton-button.fc-button.fc-button-primary")
+        )
+    )
+    time.sleep(1)
+
 def imp_horario(url,f,g,c):
     # Personalizacion de archivo final
-    nombre_archivo = f"hp_facultad{f}_grado{g}_curso{c}.pdf"
+    nombre_archivo = f"hp_facultad{f}_grado{g}_curso{c}.png"
 
     # Carpeta donde se descargará el PDF
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    DOWNLOAD_DIR = os.path.join(BASE_DIR, "horarios_pdf")
+    DOWNLOAD_DIR = os.path.join(BASE_DIR, "horarios")
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
     # Configurar opciones de Chrome
     options = Options()
     options.add_argument("--start-maximized")
+    options.add_argument("--window-size=1920,1080")
+    #options.add_argument("--window-size=2560,1440")
     # Si el sitio usa certificado no válido (https interno como el tuyo)
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--headless=new")
@@ -83,6 +101,7 @@ def imp_horario(url,f,g,c):
         boton_cal = wait.until(EC.element_to_be_clickable((By.ID, "buscarCalendario")))
         boton_cal.click()
         print('Boton -Veure Calendari- pulsado correctamente')
+        esperar_carga_pagina(driver)
 
 
         #Miramos que dia es hoy
@@ -103,25 +122,45 @@ def imp_horario(url,f,g,c):
             driver.execute_script("arguments[0].click();", boton_seg)
 
             print('Boton -Seguent- pulsado correctamente')
+            esperar_carga_pagina(driver)
 
         else:
             print("Es entre semana (NO pulsamos boton -Seguent-)")
+            esperar_carga_pagina(driver)
 
 
         # Esperamos a aque cargue la pagina
         wait.until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
-        wait.until(
-            EC.element_to_be_clickable(
-                (By.CSS_SELECTOR, ".fc-printButton-button.fc-button.fc-button-primary")
-            ))
-        time.sleep(3)
 
 
         # Descargar PDF
-        # Obtener altura total de la página en píxeles
-        total_height_px = driver.execute_script("""
+        #Scroll abajo
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        while True:
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            esperar_carga_pagina(driver)
+
+            if new_height == last_height:
+                break
+            last_height = new_height
+        
+
+        # Obtener tamaño total de la página
+        total_width = driver.execute_script("""
+            return Math.max(
+                document.body.scrollWidth,
+                document.documentElement.scrollWidth,
+                document.body.offsetWidth,
+                document.documentElement.offsetWidth,
+                document.body.clientWidth,
+                document.documentElement.clientWidth
+            );
+        """)
+
+        total_height = driver.execute_script("""
             return Math.max(
                 document.body.scrollHeight,
                 document.documentElement.scrollHeight,
@@ -131,30 +170,17 @@ def imp_horario(url,f,g,c):
                 document.documentElement.clientHeight
             );
         """)
-        # Convertir px → pulgadas
-        dpi = 80 # Chrome usa 96 DPI por defecto
-        total_height_inches = total_height_px / dpi
 
-        # Generar PDF usando CDP
-        pdf = driver.execute_cdp_cmd("Page.printToPDF", {
-            "printBackground": True,
-            "landscape": False,
-            "paperWidth": 8.27,               # A4 ancho en pulgadas
-            "paperHeight": total_height_inches,
-            "marginTop": 0,
-            "marginBottom": 0,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "preferCSSPageSize": False
-        })
+        # Ajustar tamaño de la ventana al tamaño completo de la página
+        driver.set_window_size(total_width, total_height)
 
-        # Guardar archivo
+        # Definir ruta de guardado
         ruta_completa = os.path.join(DOWNLOAD_DIR, nombre_archivo)
 
-        with open(ruta_completa, "wb") as f:
-            f.write(base64.b64decode(pdf['data']))
-        
-        return print(f"PDF guardado correctamente en:\n{ruta_completa}")
+        # Guardar screenshot
+        driver.save_screenshot(ruta_completa)
+
+        return print(f"Screenshot guardado correctamente en:\n{ruta_completa}")
 
 
     except Exception as e:
